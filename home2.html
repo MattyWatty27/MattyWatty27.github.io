@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*Import nav bar font*/
+            @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+            /* Add a black background color to the top navigation */
+            body {
+                margin: 0;
+            }
+            div,
+            img,
+            a {
+                box-sizing: border-box;
+            }
+            .topnav {
+                background-color: #00144bff;
+                overflow: hidden;
+                font-family: 'Anton', sans-serif;
+                height: 75px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                z-index: 100;
+            }
+
+            /* Style the links inside the navigation bar */
+            .nav-link {
+                float: right;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .logo {
+                float: left;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                height: 100%;
+            }
+
+            .logo img {
+                height: 100%;
+            }
+
+            /* Change the color of links on hover */
+            .topnav a:hover {
+                background-color: #ff33a2ff;
+                /*color: black;*/
+            }
+
+            .events {
+                font-family: 'Anton';
+            }
+
+            #marathonVideo {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+
+            .video-overlay {
+                position: absolute;
+                top: 20%;
+                left: 5%;
+                right: 5%;
+                /*rgba(0, 20, 75, 0.5);*/
+                color: #ff33a2ff;
+                font-size: 13vw;
+                text-shadow: 10px 10px #00144bff;
+
+            }
+
+            .Events {
+                font-family: 'Anton';
+                color: white;
+                background-color: #00144bff;
+                padding: 1%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="logo" href="/"><img src="https://lmeldigitalcontent.blob.core.windows.net/$web/LME/holding/images/lme-logo.svg"></a>
+            <a class="nav-link" href="#news">ABOUT</a>
+            <a class="nav-link" href="#contact">HIGHLIGHTS</a>
+            <a class="nav-link" href="#about">EVENTS</a>
+            <a class="nav-link" href="#home">HOME</a>
+        </div>
+
+        <div class="events">
+            <div style="position: relative;">
+                <video autoplay loop muted plays-inline width="100%">
+                    <source src="./Running_09_Videvo.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    JOIN THE LONDON MARATHON TODAY
+                </div>
+            </div>
+            <div class="Events">
+                <h1>THE LONDON MARATHON</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad animi esse reprehenderit aliquam ea? Eos nulla distinctio alias, ex ad veniam, temporibus minus dolorum numquam unde tempora tenetur quae dolorem!</p>
+            </div>
+        </div>
+
+    </body>
+</html>

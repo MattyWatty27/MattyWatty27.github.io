@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*Import nav bar font*/
+            @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+            /* Add a black background color to the top navigation */
+            body {
+                margin: 0;
+                background-color: #00144bff;
+                font-family: 'Anton';
+            }
+
+            div,
+            img,
+            a {
+                box-sizing: border-box;
+            }
+
+            .topnav {
+                background-color: #00144bff;
+                overflow: hidden;
+                font-family: 'Anton', sans-serif;
+                height: 75px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                z-index: 100;
+            }
+
+            /* Style the links inside the navigation bar */
+            .nav-link {
+                float: right;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 30px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-link-current {
+                float: right;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: underline;
+                font-size: 30px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .logo {
+                float: left;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                height: 100%;
+            }
+
+            .logo img {
+                height: 100%;
+            }
+
+            /* Change the color of links on hover */
+            .topnav a:hover {
+                background-color: #ff33a2ff;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            /* Style the search box inside the navigation bar */
+            #searchBar input[type=text] {
+                padding-left: 50px;
+                font-family: 'Anton';
+                width: 100%;
+                border: none;
+                margin-top: 75px;
+                font-size: 30px;
+                overflow: hidden;
+                background-color: #ff33a2ff;
+                position: fixed;
+                color: white;
+            }
+
+            ::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 1; /* Firefox */
+            }
+
+            #search-results {
+                padding-top: 150px;
+                color: white;
+                opacity: 0;
+                transition: opacity 0.3s ease-in;
+            }
+
+            #search-results.visible {
+                opacity: 1;
+                background-color: red;
+            }
+
+            #movetxt {
+                position: relative;
+                -webkit-animation: moving 5s infinite;
+                animation: moving 5s infinite;
+            }
+
+            @keyframes moving {
+                from {
+                    top: 0;
+                }
+                to {
+                    top: 200px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="logo" href="home3.html"><img src="https://lmeldigitalcontent.blob.core.windows.net/$web/LME/holding/images/lme-logo.svg"></a>
+            <a class="nav-link" href="#news">ABOUT</a>
+            <a class="nav-link" href="#contact">HIGHLIGHTS</a>
+            <a class="nav-link-current" href="events.html">EVENTS</a>
+            <a class="nav-link" href="home3.html">HOME</a>
+        </div>
+
+        <div id="searchBar">
+            <input type="text" placeholder="SEARCH AN EVENT...">
+            <button onclick="search()" style="padding-top: 200px;">Hello</button>
+        </div>
+        <div id="search-results">
+            Hello I'm search results
+        </div>
+        <script>
+            const search = () => {
+                console.log(document.getElementById('search-results'))
+                document.getElementById('search-results').classList.add('visible')
+
+            }
+        </script>
+        <p id="movetxt">Hi Im moving</p>
+    </body>
+</html>
